@@ -125,12 +125,15 @@
       animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
 
-    /* Staggered entry */
+    /* Staggered entry (Updated for more buttons) */
     .link-card:nth-child(1) { animation-delay: 0.1s; }
     .link-card:nth-child(2) { animation-delay: 0.2s; }
     .link-card:nth-child(3) { animation-delay: 0.3s; }
     .link-card:nth-child(4) { animation-delay: 0.4s; }
     .link-card:nth-child(5) { animation-delay: 0.5s; }
+    .link-card:nth-child(6) { animation-delay: 0.6s; }
+    .link-card:nth-child(7) { animation-delay: 0.7s; }
+    .link-card:nth-child(8) { animation-delay: 0.8s; }
 
     .link-card:hover {
       transform: translateY(-5px) scale(1.02);
@@ -243,6 +246,38 @@
       0% { height: 4px; }
       100% { height: 18px; }
     }
+
+    /* Special Gold Card (បង់រំលស់) */
+    .special-card-gold {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
+      border: 1px solid rgba(234, 179, 8, 0.5);
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.2);
+    }
+    .special-card-gold:hover {
+      background: linear-gradient(135deg, rgba(234, 179, 8, 0.25) 0%, rgba(0, 0, 0, 0.6) 100%);
+      border-color: rgba(234, 179, 8, 0.9);
+      box-shadow: 0 10px 30px rgba(234, 179, 8, 0.4);
+      transform: translateY(-5px) scale(1.02);
+    }
+    .special-card-gold .icon-box {
+      box-shadow: 0 0 15px rgba(234, 179, 8, 0.5);
+    }
+
+    /* Special Purple Card (យកលក់បន្ត) */
+    .special-card-purple {
+      background: linear-gradient(135deg, rgba(217, 70, 239, 0.15) 0%, rgba(0, 0, 0, 0.4) 100%);
+      border: 1px solid rgba(217, 70, 239, 0.5);
+      box-shadow: 0 0 15px rgba(217, 70, 239, 0.2);
+    }
+    .special-card-purple:hover {
+      background: linear-gradient(135deg, rgba(217, 70, 239, 0.25) 0%, rgba(0, 0, 0, 0.6) 100%);
+      border-color: rgba(217, 70, 239, 0.9);
+      box-shadow: 0 10px 30px rgba(217, 70, 239, 0.4);
+      transform: translateY(-5px) scale(1.02);
+    }
+    .special-card-purple .icon-box {
+      box-shadow: 0 0 15px rgba(217, 70, 239, 0.5);
+    }
   </style>
 </head>
 
@@ -295,7 +330,7 @@
     <!-- Links -->
     <div class="flex flex-col">
       
-      <!-- Link 1 -->
+      <!-- Link 1: Facebook Page -->
       <a href="https://web.facebook.com/phearindalinphoneshop" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-blue-600 to-blue-800">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white"><path d="M14 11.5h2.5l.5-2.5H14V7c0-.6.4-1 1-1h1.5V3.5h-2c-2.8 0-4 1.2-4 3.7V9h-2v2.5h2V20h3z"></path></svg>
@@ -313,9 +348,43 @@
         </div>
       </a>
 
+      <!-- NEW: Button បង់រំលស់ (Gold Theme) -->
+      <a href="https://t.me/phearindalin_phoneshop" class="link-card special-card-gold">
+        <!-- Badge -->
+        <div class="absolute top-0 right-0 bg-yellow-500 text-black text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-lg">សេវាកម្មពិសេស</div>
+        
+        <div class="icon-box bg-gradient-to-br from-yellow-400 to-yellow-600">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white">
+            <path d="M21 18v1c0 1.1-.9 2-2 2H5c-1.11 0-2-.9-2-2V5c0-1.1.89-2 2-2h14c1.1 0 2 .9 2 2v1h-9c-1.11 0-2 .9-2 2v8c0 1.1.89 2 2 2h9zm-9-2h10V8H12v8zm4-2.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="font-bold text-[1.1rem] text-yellow-400 tracking-wide flex items-center gap-1.5">
+            សេវាកម្ម បង់រំលស់
+          </h2>
+          <p class="text-xs text-yellow-100/80 mt-1 font-light">ឯកសារងាយៗ</p>
+        </div>
+      </a>
 
-      <!-- Link 3 -->
-      <!-- Location / Google Maps Link -->
+      <!-- NEW: Button សំរាប់យកលក់បន្ត (Purple Theme) -->
+      <a href="https://t.me/Phearin_Chey" class="link-card special-card-purple">
+        <!-- Badge -->
+        <div class="absolute top-0 right-0 bg-fuchsia-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-lg">បោះដុំ</div>
+        
+        <div class="icon-box bg-gradient-to-br from-fuchsia-500 to-purple-700">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white">
+            <path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"></path>
+          </svg>
+        </div>
+        <div>
+          <h2 class="font-bold text-[1.1rem] text-fuchsia-300 tracking-wide flex items-center gap-1.5">
+            សំរាប់យកលក់បន្ត
+          </h2>
+          <p class="text-xs text-fuchsia-100/80 mt-1 font-light">តម្លៃបោះដុំពិសេសសម្រាប់ម៉ូយ</p>
+        </div>
+      </a>
+
+      <!-- Link 3: Google Maps Link -->
       <a href="https://maps.app.goo.gl/HKpvTZ9fmqRvFMwd8" target="_blank" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-red-500 to-red-700">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white">
@@ -334,7 +403,7 @@
         </div>
       </a>
 
-      <!-- Link 4 -->
+      <!-- Link 4: TikTok 1 -->
       <a href="https://www.tiktok.com/@phearindalinphoneshop1?_r=1&_t=ZS-98VekEzXxlo" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-gray-900 to-black">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.78 0 2.89 2.89 0 0 1 2.89-2.89c.35 0 .69.05 1.01.15V9.45c-1.12-.3-2.31-.35-3.45.05A6.33 6.33 0 0 0 2 15.78a6.33 6.33 0 0 0 6.33 6.33A6.33 6.33 0 0 0 14.66 15.78v-5.26a8.4 8.4 0 0 0 4.93 1.54V8.58a6.76 6.76 0 0 1-2.94-1.89z"></path></svg>
@@ -351,6 +420,7 @@
         </div>
       </a>
 
+      <!-- Link 5: TikTok 2 -->
       <a href="https://www.tiktok.com/@phearindalin366?_r=1&_t=ZS-98VelogPWPi" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-gray-900 to-black">
           <svg class="w-5 h-5" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.78 0 2.89 2.89 0 0 1 2.89-2.89c.35 0 .69.05 1.01.15V9.45c-1.12-.3-2.31-.35-3.45.05A6.33 6.33 0 0 0 2 15.78a6.33 6.33 0 0 0 6.33 6.33A6.33 6.33 0 0 0 14.66 15.78v-5.26a8.4 8.4 0 0 0 4.93 1.54V8.58a6.76 6.76 0 0 1-2.94-1.89z"></path></svg>
@@ -367,7 +437,7 @@
         </div>
       </a>
 
-      <!-- Link 5 -->
+      <!-- Link 6: Telegram -->
       <a href="https://t.me/phearindalin_phoneshop" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-sky-400 to-blue-500">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white"><path d="M9.999 15.17l-.39 5.58c.56 0 .8-.24 1.1-.53l2.64-2.52 5.47 4c1 .56 1.72.27 1.98-.92l3.59-16.85.01-.01c.32-1.49-.54-2.07-1.52-1.72L1.45 9.53c-1.46.58-1.44 1.41-.25 1.79l5.88 1.83L18.69 6.2c.59-.36 1.13-.16.69.23"></path></svg>
@@ -384,6 +454,7 @@
         </div>
       </a>
 
+      <!-- Link 7: Telegram Group -->
       <a href="https://t.me/+Vc42IN6ntZeMWV9p" class="glass-card link-card">
         <div class="icon-box bg-gradient-to-br from-sky-400 to-blue-500">
           <svg class="w-6 h-6" viewBox="0 0 24 24" fill="white"><path d="M9.999 15.17l-.39 5.58c.56 0 .8-.24 1.1-.53l2.64-2.52 5.47 4c1 .56 1.72.27 1.98-.92l3.59-16.85.01-.01c.32-1.49-.54-2.07-1.52-1.72L1.45 9.53c-1.46.58-1.44 1.41-.25 1.79l5.88 1.83L18.69 6.2c.59-.36 1.13-.16.69.23"></path></svg>
@@ -528,19 +599,21 @@
     const audioText = document.getElementById('audio-text');
     const waves = document.getElementById('waves');
     
-    audio.volume = 0.4; 
+    if(audio) audio.volume = 0.4; 
 
-    audioBtn.addEventListener('click', () => {
-      if (audio.paused) {
-        audio.play();
-        waves.classList.add('playing');
-        audioText.textContent = "កំពុងចាក់ (Playing)";
-      } else {
-        audio.pause();
-        waves.classList.remove('playing');
-        audioText.textContent = "ចាក់តន្ត្រី (Play)";
-      }
-    });
+    if(audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+          waves.classList.add('playing');
+          audioText.textContent = "កំពុងចាក់ (Playing)";
+        } else {
+          audio.pause();
+          waves.classList.remove('playing');
+          audioText.textContent = "ចាក់តន្ត្រី (Play)";
+        }
+      });
+    }
   </script>
 </body>
 </html>
